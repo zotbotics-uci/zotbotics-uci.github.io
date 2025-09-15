@@ -8,7 +8,9 @@ export default function Home() {
       <section className="section hero">
         <p className="eyebrow">Zotbotics' Introductory MakerSpace</p>
         <h1 className="title">ZIMS</h1>
-        <p className="subtitle">Design, build, and learn with our open maker community at UCI.</p>
+        <p className="subtitle">
+          Design, build, and learn with our open maker community at UCI.
+        </p>
         <Link to="/makerspace" className="cta">Learn More ↓</Link>
       </section>
 
@@ -30,7 +32,7 @@ export default function Home() {
             </p>
           </div>
           <div className="card">
-            <img src={asset('image2.svg')} alt="about image" />
+            <img src={asset('image2.png')} alt="about image" />
           </div>
         </div>
       </section>
@@ -45,7 +47,7 @@ export default function Home() {
             <Link to="/makerspace" className="cta">Explore our Makerspace</Link>
           </div>
           <div className="card">
-            <img src={asset('image3.svg')} alt="makerspace gear" />
+            <img src={asset('image3.png')} alt="makerspace gear" />
           </div>
         </div>
       </section>
@@ -53,7 +55,7 @@ export default function Home() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card">
-            <img src={asset('image4.svg')} alt="project sample" />
+            <img src={asset('image4.png')} alt="project sample" />
           </div>
           <div className="card card-pad">
             <h2 style={{ marginTop: 0 }}>PROJECTS</h2>

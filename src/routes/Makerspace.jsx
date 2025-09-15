@@ -1,15 +1,16 @@
 import React from 'react'
+import { asset } from '../asset'
 
-function Stat({num,label}){
+function Stat({ num, label }) {
   return (
-    <div className="card card-pad" style={{textAlign:'center'}}>
+    <div className="card card-pad" style={{ textAlign: 'center' }}>
       <div className="big-number">{num}</div>
       <div className="label">{label}</div>
     </div>
   )
 }
 
-export default function Makerspace(){
+export default function Makerspace() {
   return (
     <>
       <section className="section hero">
@@ -26,11 +27,20 @@ export default function Makerspace(){
 
       <section className="section">
         <div className="grid cols-2">
-          <div className="card"><img src="/src/assets/image7.svg" alt="printer wall" /></div>
+          <div className="card">
+            <img src={asset('image7.png')} alt="printer wall" />
+          </div>
           <div className="card card-pad">
             <h3>About the Makerspace</h3>
-            <p>Located on outer ring road, the Interim Classroom Facility houses the campus’ largest makerspace.</p>
-            <p>From our large collection of 3D printers to our laser cutter and large selection of tools, our members can find anything to help complete projects. Plus, our MakerSpace Managers are always there to help!</p>
+            <p>
+              Located on outer ring road, the Interim Classroom Facility houses the
+              campus’ largest makerspace.
+            </p>
+            <p>
+              From our large collection of 3D printers to our laser cutter and large
+              selection of tools, our members can find anything to help complete
+              projects. Plus, our MakerSpace Managers are always there to help!
+            </p>
           </div>
         </div>
       </section>
