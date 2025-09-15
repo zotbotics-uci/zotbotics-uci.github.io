@@ -11,24 +11,9 @@ export default function Navbar() {
           <span>ZIMS</span>
         </Link>
         <div className="nav-links">
-          <NavLink
-            to="/about"
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/makerspace"
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-          >
-            MAKERSPACE
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-          >
-            PROJECTS
-          </NavLink>
+          <NavLink to="/about" className={({isActive})=>`nav-link ${isActive?'active':''}`}>About</NavLink>
+          <NavLink to="/makerspace" className={({isActive})=>`nav-link ${isActive?'active':''}`}>MAKERSPACE</NavLink>
+          <NavLink to="/projects" className={({isActive})=>`nav-link ${isActive?'active':''}`}>PROJECTS</NavLink>
         </div>
       </div>
     </nav>

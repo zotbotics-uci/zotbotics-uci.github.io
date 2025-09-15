@@ -39,7 +39,7 @@ export default function Home() {
             <Link to="/makerspace" className="cta">Explore our Makerspace</Link>
           </div>
           <div className="card">
-            <div className="media">
+            <div className="media lg">
               <img src={asset('image3.png')} alt="makerspace gear" />
             </div>
           </div>

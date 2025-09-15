@@ -28,14 +28,21 @@ export default function Makerspace() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card">
-            <div className="media">
+            <div className="media lg">
               <img src={asset('image7.png')} alt="printer wall" />
             </div>
           </div>
           <div className="card card-pad">
             <h3>About the Makerspace</h3>
-            <p>Located on outer ring road, the Interim Classroom Facility houses the campus’ largest makerspace.</p>
-            <p>From our large collection of 3D printers to our laser cutter and large selection of tools, our members can find anything to help complete projects. Plus, our MakerSpace Managers are always there to help!</p>
+            <p>
+              Located on outer ring road, the Interim Classroom Facility houses the
+              campus’ largest makerspace.
+            </p>
+            <p>
+              From our large collection of 3D printers to our laser cutter and large
+              selection of tools, our members can find anything to help complete
+              projects. Plus, our MakerSpace Managers are always there to help!
+            </p>
           </div>
         </div>
       </section>

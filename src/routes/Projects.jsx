@@ -12,7 +12,7 @@ export default function Projects() {
             <p className="subtitle"><em>Join our Discord to get involved →</em></p>
           </div>
           <div className="card">
-            <div className="media">
+            <div className="media lg">
               <img src={asset('image7.png')} alt="projects hero" />
             </div>
           </div>

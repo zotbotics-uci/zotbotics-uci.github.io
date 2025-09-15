@@ -8,8 +8,8 @@ export default function About() {
         <h1 className="title">ABOUT US</h1>
         <p className="subtitle" style={{ maxWidth: 800 }}>
           ZIMS is a club who invites students from the University of California, Irvine to collaborate
-          on creative and technical work. Members are encouraged to expand their knowledge beyond the classroom
-          and apply concepts to innovate and invent.
+          on creative and technical work. Members are encouraged to expand their knowledge beyond the
+          classroom and apply concepts to innovate and invent.
         </p>
       </section>
 
