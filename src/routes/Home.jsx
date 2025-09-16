@@ -9,7 +9,7 @@ export default function Home() {
         <p className="eyebrow">Zotbotics' Introductory MakerSpace</p>
         <h1 className="title">ZIMS</h1>
         <p className="subtitle">Design, build, and learn with our open maker community at UCI.</p>
-        <Link to="/zims/makerspace" className="cta">Learn More ↓</Link>
+        <Link to="/makerspace" className="cta">Learn More ↓</Link>
       </section>
 
       <section className="section">
@@ -20,7 +20,7 @@ export default function Home() {
               ZIMS is a club hosting UCI's open makerspace. Our goal is to provide
               a place for passions in engineering, robotics, and craftsmanship to thrive.
             </p>
-            <p><Link to="/zims/about" className="cta">More about our community →</Link></p>
+            <p><Link to="/about" className="cta">More about our community →</Link></p>
             
             <div className="meeting-info">
               <strong>Join us for General Meetings!</strong>
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="grid cols-2">
           <div>
             <h2 className="title" style={{ fontSize: 48, marginBottom: 16, textAlign: 'left' }}>DESIGN, BUILD, &amp; MORE!</h2>
-            <Link to="/zims/makerspace" className="cta">Explore our Makerspace</Link>
+            <Link to="/makerspace" className="cta">Explore our Makerspace</Link>
           </div>
           <div className="card">
             <div className="media lg">
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="card card-pad">
             <h2>PROJECTS</h2>
             <p>Build skills by building projects!</p>
-            <p><Link to="/zims/projects" className="cta">View Gallery →</Link></p>
+            <p><Link to="/projects" className="cta">View Gallery →</Link></p>
           </div>
         </div>
       </section>
