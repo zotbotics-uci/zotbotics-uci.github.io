@@ -13,10 +13,10 @@ export default function App() {
       <Navbar />
       <main className="page">
         <Routes>
-          <Route path="/zims/" element={<Home />} />
-          <Route path="/zims/about" element={<About />} />
-          <Route path="/zims/makerspace" element={<Makerspace />} />
-          <Route path="/zims/projects" element={<Projects />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/makerspace" element={<Makerspace />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>
       <Footer />
