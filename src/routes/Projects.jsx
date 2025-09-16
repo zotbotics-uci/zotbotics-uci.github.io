@@ -27,40 +27,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-
-      <section className="section">
-        <h2 style={{ 
-          marginTop: 0, 
-          textAlign: 'center', 
-          fontSize: '32px',
-          color: 'var(--accent)',
-          marginBottom: '32px'
-        }}>
-          Gallery
-        </h2>
-        <div className="grid gallery">
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image8.png')} alt="gallery 1" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image9.png')} alt="gallery 2" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image10.png')} alt="gallery 3" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image11.png')} alt="gallery 4" />
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
