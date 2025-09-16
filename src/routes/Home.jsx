@@ -15,13 +15,20 @@ export default function Home() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card card-pad">
-            <h2 style={{ marginTop: 0 }}>ABOUT US</h2>
+            <h2>ABOUT US</h2>
             <p>
-              ZIMS is a club hosting UCI&apos;s open makerspace. Our goal is to provide
+              ZIMS is a club hosting UCI's open makerspace. Our goal is to provide
               a place for passions in engineering, robotics, and craftsmanship to thrive.
             </p>
             <p><Link to="/about" className="cta">More about our community →</Link></p>
-            <p><strong>Join us for General Meetings!</strong><br/>Thursdays 5–6pm<br/>Engineering Gateway 3161</p>
+            
+            <div className="meeting-info">
+              <strong>Join us for General Meetings!</strong>
+              <div className="meeting-time">
+                Thursdays 5–6pm<br/>
+                Engineering Gateway 3161
+              </div>
+            </div>
           </div>
           <div className="card">
             <div className="media">
@@ -35,7 +42,7 @@ export default function Home() {
       <section className="section halo-wrap">
         <div className="grid cols-2">
           <div>
-            <h2 className="title" style={{ fontSize: 48, marginBottom: 16 }}>DESIGN, BUILD, &amp; MORE!</h2>
+            <h2 className="title" style={{ fontSize: 48, marginBottom: 16, textAlign: 'left' }}>DESIGN, BUILD, &amp; MORE!</h2>
             <Link to="/makerspace" className="cta">Explore our Makerspace</Link>
           </div>
           <div className="card">
@@ -54,7 +61,7 @@ export default function Home() {
             </div>
           </div>
           <div className="card card-pad">
-            <h2 style={{ marginTop: 0 }}>PROJECTS</h2>
+            <h2>PROJECTS</h2>
             <p>Build skills by building projects!</p>
             <p><Link to="/projects" className="cta">View Gallery →</Link></p>
           </div>

@@ -15,6 +15,7 @@ export default function Makerspace() {
     <>
       <section className="section hero">
         <h1 className="title">THE MAKERSPACE</h1>
+        <p className="subtitle">Located on outer ring road, our makerspace offers cutting-edge tools and equipment for all your creative projects.</p>
       </section>
 
       <section className="section">
@@ -33,10 +34,10 @@ export default function Makerspace() {
             </div>
           </div>
           <div className="card card-pad">
-            <h3>About the Makerspace</h3>
+            <h2>About the Makerspace</h2>
             <p>
               Located on outer ring road, the Interim Classroom Facility houses the
-              campus’ largest makerspace.
+              campus' largest makerspace.
             </p>
             <p>
               From our large collection of 3D printers to our laser cutter and large
