@@ -18,6 +18,7 @@
 /* Base */
 *{ box-sizing:border-box }
 html,body,#root{ height:100% }
+html { background: var(--page-bg); } /* ✅ Force html background */
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
@@ -29,8 +30,16 @@ body{
 }
 img,svg,video,canvas{ max-width:100%; height:auto }
 a{ color:inherit; text-decoration:none }
-.app-shell{ display:flex; flex-direction:column; min-height:100vh }
-.page{ flex:1 }
+.app-shell{ 
+  display:flex; 
+  flex-direction:column; 
+  min-height:100vh;
+  background: var(--page-bg); /* ✅ Force app-shell background */
+}
+.page{ 
+  flex:1;
+  background: var(--page-bg); /* ✅ Force page background */
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
@@ -64,13 +73,13 @@ a{ color:inherit; text-decoration:none }
   max-width:var(--container); margin:0 auto;
   padding:clamp(40px,7vw,56px) var(--gutter);
   overflow:hidden; position:relative;
-  background:transparent;     /* ✅ let page color show through */
+  background:var(--page-bg);     /* ✅ Force section background to match */
 }
 .hero{
   padding-top:clamp(80px,12vw,120px);
   padding-bottom:clamp(80px,12vw,120px);
   text-align:center;
-  background:transparent;     /* ✅ remove radial gradient */
+  background:var(--page-bg);     /* ✅ Force hero background to match */
 }
 
 /* Headings */
@@ -189,13 +198,12 @@ a{ color:inherit; text-decoration:none }
 }
 
 /* ===========================
-   Optional halo (disabled)
+   Halo effect - SELECTIVE (only on .halo-wrap)
    =========================== */
-/* If you want *no* glow at all, keep this hidden. Toggle display:block to enable. */
 .halo-wrap{ position:relative; isolation:isolate; overflow:hidden }
 .halo-wrap::before{
   content:""; position:absolute; inset:-20% -10%;
-  z-index:-1; pointer-events:none; display:none; /* ✅ off by default */
+  z-index:-1; pointer-events:none; display:block; /* ✅ enabled for halo-wrap sections */
   background:radial-gradient(ellipse 800px 400px at 30% 50%,
     rgba(232,214,138,.25) 0%,
     rgba(232,214,138,.12) 30%,
