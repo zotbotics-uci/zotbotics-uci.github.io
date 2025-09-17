@@ -11,6 +11,7 @@ function Stat({ num, label }) {
 }
 
 export default function Makerspace() {
+  // arrive at the very top
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
@@ -33,10 +34,11 @@ export default function Makerspace() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card">
-            <div className="media lg no-border">
+            <div className="media lg contain no-border">
               <img src={asset('image7.png')} alt="printer wall" />
             </div>
           </div>
+
           <div className="card card-pad">
             <h2>About the Makerspace</h2>
             <p>

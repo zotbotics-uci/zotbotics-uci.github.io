@@ -104,11 +104,20 @@ a{ color:inherit; text-decoration:none }
 }
 .card-pad{ padding:32px }
 .card-pad h2{
-  margin-top:0; margin-bottom:20px; font-size:28px; font-weight:700;
-  color:var(--accent); line-height:1.2;
+  margin-top:0; margin-bottom:20px;
+  font-size:32px; /* bumped from 28px */
+  font-weight:700;
+  color:var(--accent);
+  line-height:1.2;
 }
 .card-pad h3{ margin-top:0; margin-bottom:16px; font-size:20px; font-weight:600; color:var(--text) }
-.card-pad p{ margin-bottom:16px; line-height:1.5; color:var(--text); opacity:.9 }
+.card-pad p{
+  margin-bottom:16px;
+  line-height:1.6;
+  font-size:18px; /* bumped for readability */
+  color:var(--text);
+  opacity:.9;
+}
 .card-pad p:last-child{ margin-bottom:0 }
 
 /* Meeting info block */
@@ -125,11 +134,10 @@ a{ color:inherit; text-decoration:none }
 .big-number{ font-size:64px; font-weight:800 }
 .label{ font-size:14px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted) }
 
-/* ---- Responsive media frames ---- */
+/* ---- Responsive media frames (UPDATED) ---- */
 .grid.cols-2{ align-items:center }
 .media {
   width: 100%;
-  max-width: 600px;
   border-radius: 16px;
   overflow: hidden;
   margin: 0 auto;
@@ -138,11 +146,30 @@ a{ color:inherit; text-decoration:none }
 .media > img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ NEW: Makerspace photo should show fully */
+.media.contain > img {
   object-fit: contain;
 }
 
-.media.lg{ max-width:600px; max-height:460px }
-.media.thumb{ --ar:4/3; max-width:300px; max-height:280px }
+/* ✅ Frontpage images shrink instead of cutting off */
+.media.lg {
+  max-height: 420px;
+}
+.media.thumb{ 
+  max-height:250px;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media.thumb > img {
+  object-position: center;
+  object-fit: cover;
+}
 .media.no-border{ border:none; box-shadow:var(--shadow); }
 
 /* Gallery grid */
@@ -150,7 +177,7 @@ a{ color:inherit; text-decoration:none }
 
 /* Mobile tweaks */
 @media (max-width:900px){
-  .media,.media.lg,.media.thumb{ inline-size:100%; max-height:360px }
+  .media,.media.lg,.media.thumb{ width:100%; max-height:400px }
   .hero{ padding-top:80px; padding-bottom:80px }
   .card-pad{ padding:24px }
   .grid{ gap:24px }
@@ -173,7 +200,7 @@ a{ color:inherit; text-decoration:none }
 .footer{ background:transparent; border-top:1px solid rgba(255,255,255,0.08) }
 .footer .section{ padding-top:28px; padding-bottom:28px }
 .small{ font-size:14px; color:var(--muted) }
-.small strong{ color:var(--text); } /* make footer labels white */
+.small strong{ color:var(--text); }
 
 /* Address: label outside, only the address boxed */
 .address-card{ padding:0; background:none; border:none; box-shadow:none; }
@@ -221,7 +248,7 @@ a{ color:inherit; text-decoration:none }
 .foot-grid{ display:grid; gap:16px; grid-template-columns: repeat(3, minmax(0,1fr)) }
 @media (max-width:800px){ .foot-grid{ grid-template-columns:1fr } }
 
-/* ===== Projects grid ===== */
+/* ===== Projects grid (UPDATED) ===== */
 .projects-grid{
   display:grid;
   grid-template-columns:1fr;
@@ -238,7 +265,7 @@ a{ color:inherit; text-decoration:none }
   border-radius:16px;
   box-shadow:var(--shadow);
   transition:transform .15s ease, border-color .15s ease;
-  display:flex; flex-direction:column; min-height:520px;
+  display:flex; flex-direction:column;
 }
 .project-card:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.22) }
 
@@ -255,32 +282,28 @@ a{ color:inherit; text-decoration:none }
 .card-blurb{ padding:0 22px 14px 22px; color:var(--text); opacity:.95; }
 .card-blurb.full{ display:block; overflow:visible; }
 
-/* Media area: same color as the card (no darker band) */
+/* Media area: Added padding back for project cards */
 .card-media {
   width: 100%;
-  aspect-ratio: 16/9;
   background: var(--card);
   border-radius: 16px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 20px 40px; /* 👈 vertical 20px, horizontal 40px (lots of side space) */
   margin-top: auto;
-  margin-bottom: 20px; /* space below image before card ends */
+  margin-bottom: 20px;
+  padding: 16px;
   overflow: hidden;
 }
 
 .card-media img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 20px;
+  border-radius: 12px;
 }
-
 
 /* Projects hero */
 .projects-hero .subtitle{ text-align:center; margin-left:auto; margin-right:auto; }
