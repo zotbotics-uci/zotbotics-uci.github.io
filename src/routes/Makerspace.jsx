@@ -15,14 +15,17 @@ export default function Makerspace() {
     <>
       <section className="section hero">
         <h1 className="title">THE MAKERSPACE</h1>
-        <p className="subtitle">Located on outer ring road, our makerspace offers cutting-edge tools and equipment for all your creative projects.</p>
+        <p className="subtitle">
+          Located on outer ring road, our makerspace offers cutting-edge tools and equipment for all your creative projects.
+        </p>
       </section>
 
       <section className="section">
         <div className="grid cols-3">
-          <Stat num="4" label="K1 Printers" />
+          {/* UPDATED STATS */}
+          <Stat num="1" label="Sienci LongMill MK1 3-Axis Mill" />
           <Stat num="12" label="Bambu A1 Printers" />
-          <Stat num="1" label="Prusa Mk3 Printer" />
+          <Stat num="70" label="W Laser (Atomstack A70 Max)" />
         </div>
       </section>
 
@@ -36,13 +39,12 @@ export default function Makerspace() {
           <div className="card card-pad">
             <h2>About the Makerspace</h2>
             <p>
-              Located on outer ring road, the Interim Classroom Facility houses the
-              campus' largest makerspace.
+              Located on outer ring road, the Interim Classroom Facility houses the campus' largest makerspace.
             </p>
             <p>
-              From our large collection of 3D printers to our laser cutter and large
-              selection of tools, our members can find anything to help complete
-              projects. Plus, our MakerSpace Managers are always there to help!
+              From our large collection of 3D printers to our Sienci LongMill MK1 3-axis CNC mill, Atomstack A70 Max
+              70-watt laser cutter, and a wide selection of hand and power tools, members can find anything to help
+              complete projects. Our MakerSpace Managers are always there to help!
             </p>
           </div>
         </div>

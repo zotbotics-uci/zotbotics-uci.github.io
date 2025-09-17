@@ -65,16 +65,16 @@ a{ color:inherit; text-decoration:none }
   letter-spacing:.02em;
   color:var(--accent);
   margin:0 0 24px;
-  text-align:center; /* keep hero titles centered */
+  text-align:center;
 }
 .subtitle{
   font-size:clamp(22px,4vw,28px);
   color:var(--text); opacity:.9; line-height:1.4;
   margin:0 0 48px; max-width:800px; margin-left:auto; margin-right:auto;
-  text-align:center; /* projects & makerspace style */
+  text-align:center;
 }
 
-/* Accent heading utilities (use in About) */
+/* Accent heading utilities */
 .accent-title{ color:var(--accent); font-weight:800; }
 .accent-title-lg{ font-size:32px; line-height:1.2; }
 
@@ -94,7 +94,7 @@ a{ color:inherit; text-decoration:none }
   .cols-2,.cols-3{ grid-template-columns:1fr }
 }
 
-/* Card */
+/* Card (generic) */
 .card{
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
@@ -119,13 +119,13 @@ a{ color:inherit; text-decoration:none }
   padding:20px; margin-top:24px;
 }
 .meeting-info strong{ color:var(--accent); font-size:16px; display:block; margin-bottom:8px }
-.meeting-time{ font-size:15px; line-height:1.4; color:var(--text); opacity:.95 }
+.meeting-time{ font-size:15px; line-height:1.4; color:var(--text); opacity:0.95 }
 
 /* Helpers */
 .big-number{ font-size:64px; font-weight:800 }
 .label{ font-size:14px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted) }
 
-/* Responsive media frames */
+/* ---- Responsive media frames ---- */
 .grid.cols-2{ align-items:center }
 .media{
   width:100%; max-width:500px; aspect-ratio:var(--ar,16/10); max-height:420px;
@@ -162,48 +162,98 @@ a{ color:inherit; text-decoration:none }
 /* Footer */
 .footer{ background:transparent; border-top:1px solid rgba(255,255,255,0.08) }
 .footer .section{ padding-top:28px; padding-bottom:28px }
-.fineprint{
-  border-top:1px solid rgba(255,255,255,0.1); margin-top:12px; padding-top:12px;
-  font-size:12px; color:var(--muted); text-align:center;
+.small{ font-size:14px; color:var(--muted) }
+.small strong{ color:var(--text); } /* make footer labels white */
+
+/* Address: label outside, only the address boxed */
+.address-card{ padding:0; background:none; border:none; box-shadow:none; }
+.address-title{ color:var(--text); font-weight:800; margin-bottom:8px; }
+.address-text{
+  display:block;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+  font-style: normal;
+  line-height: 1.4;
+  color: var(--text);
+  opacity: .9;
 }
 
-/* Space before footer */
+/* Email link underline (if used elsewhere) */
+.underline-link{
+  border-bottom: 1px dashed var(--accent);
+  text-underline-offset: 3px;
+}
+.underline-link:hover{
+  color: var(--accent);
+  border-bottom-style: solid;
+}
+
+/* Social/contact pills */
+.social-links{ display:flex; gap:10px; margin-top:8px; flex-wrap:wrap; }
+.social-pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:999px;
+  background:rgba(232,214,138,0.06);
+  text-decoration:none;
+  transition:transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+}
+.social-pill .pill-icon{ color:var(--accent); }
+.social-pill .pill-emoji{ font-size:16px; line-height:1; }
+.social-pill .handle{ color:var(--muted); margin-left:2px; }
+.social-pill .ext{ opacity:.8; margin-left:2px; }
+.social-pill:hover{
+  border-color: var(--accent);
+  background: rgba(232,214,138,0.12);
+  transform: translateY(-1px);
+  color: var(--text);
+}
+
+/* Space before footer (keep) */
 .section:last-of-type{ padding-bottom:72px }
 
 /* Utility */
 .line{ height:1px; background:rgba(255,255,255,0.1); margin:28px 0 }
-.small{ font-size:14px; color:var(--muted) }
-.foot-grid{ display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr)) }
+.foot-grid{ display:grid; gap:16px; grid-template-columns: repeat(3, minmax(0,1fr)) }
 @media (max-width:800px){ .foot-grid{ grid-template-columns:1fr } }
 
 /* ===== Projects grid (boxy portfolio style) ===== */
 .projects-grid{
-  display:grid; grid-template-columns:1fr; gap:28px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  align-items:stretch;      /* stretch children to equal card heights */
 }
 @media (min-width:980px){
-  .projects-grid{ grid-template-columns:1fr 1fr; align-items:stretch; }
+  .projects-grid{ grid-template-columns:1fr 1fr; }
 }
 
-/* Projects cards */
+/* Projects cards — equal height via flex layout */
 .project-card{
   background:var(--card);
-  border:1px solid rgba(255,255,255,.14); /* clearer outline */
+  border:1px solid rgba(255,255,255,.14);
   border-radius:16px;
   box-shadow:var(--shadow);
-  overflow:hidden;
   transition:transform .15s ease, border-color .15s ease;
-  display:grid; grid-template-rows:auto auto 1fr; /* header, blurb, media */
+
+  display:flex;            /* key: equalize height */
+  flex-direction:column;
+  min-height: 520px;        /* ensures consistent total height */
 }
 .project-card:hover{ transform:translateY(-2px); border-color:rgba(255,255,255,.22) }
 
-/* Card header (left-aligned) */
+/* Card header */
 .card-head{
   padding:20px 22px 10px 22px;
   display:grid; grid-template-columns:auto 1fr; grid-template-rows:auto auto;
   column-gap:12px; row-gap:4px; align-items:baseline; text-align:left;
 }
 .card-num{ grid-row:span 2; opacity:.75; font-variant-numeric:tabular-nums; letter-spacing:.06em }
-.card-title{ margin:0; font-size:1.2rem; line-height:1.3; color:var(--text); } /* white titles */
+.card-title{ margin:0; font-size:1.2rem; line-height:1.3; color:var(--text); }
 .card-title .arrow{ margin-left:6px; opacity:.8 }
 .card-sub{ font-size:.9rem; color:var(--muted) }
 
@@ -214,24 +264,44 @@ a{ color:inherit; text-decoration:none }
   min-height:calc(1.4em * 3);
 }
 
-/* Uniform image size */
+/* --- UNIFORM media box (no cropping) --- */
 .card-media{
-  width:100%; aspect-ratio:16 / 9;
+  /* fixed visual box so all images look the same size */
+  width:100%;
+  aspect-ratio:16 / 9;      /* consistent across cards */
+  background:radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,.06), transparent 60%), #07152e;
   border-top:1px solid rgba(255,255,255,.06);
-  background:radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,.06), transparent 60%);
+  border-bottom-left-radius:16px;
+  border-bottom-right-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* guard against grid/min-content oddities */
+  min-height:0;
+  margin-top:auto;          /* pushes media to the bottom to equalize */
+  overflow:hidden;          /* keeps any stray pixels inside the box */
 }
 .card-media img{
-  width:100%; height:100%; object-fit:cover; display:block;
-  border-bottom-left-radius:16px; border-bottom-right-radius:16px;
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  display:block;
+
+  /* DO NOT CROP: fit fully inside the 16:9 box */
+  object-fit:contain;
+  object-position:center center;
+
+  /* ensure wrapper does the rounding */
+  border-radius:0;
 }
 
-/* Projects hero: keep paragraph centered like Makerspace */
-.projects-hero .subtitle{
-  text-align:center;
-  margin-left:auto; margin-right:auto;
-}
+/* Projects hero: keep paragraph centered */
+.projects-hero .subtitle{ text-align:center; margin-left:auto; margin-right:auto; }
 
-/* --- Legacy slider styles (kept in case you reuse) --- */
+/* --- Legacy slider styles (kept) --- */
 .levels-stepper{ display:flex; align-items:center; justify-content:center; gap:16px; margin:0 auto 32px; padding-inline:8px }
 .levels-list{ display:flex; align-items:center; gap:8px; list-style:none; margin:0; padding:0; overflow:auto }
 .levels-item{ display:flex; align-items:center; gap:8px; white-space:nowrap }

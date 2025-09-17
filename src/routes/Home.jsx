@@ -63,7 +63,7 @@ export default function Home() {
           <div className="card card-pad">
             <h2>PROJECTS</h2>
             <p>Build skills by building projects!</p>
-            <p><Link to="/projects" className="cta">View Gallery →</Link></p>
+            <p><Link to="/projects" className="cta">View Projects →</Link></p>
           </div>
         </div>
       </section>

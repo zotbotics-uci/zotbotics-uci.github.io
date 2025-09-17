@@ -66,9 +66,8 @@ export default function Projects() {
             <article key={p.num} className="project-card">
               <header className="card-head">
                 <div className="card-num">{p.num}</div>
-                <h2 className="card-title">
-                  {p.title} <span className="arrow">→</span>
-                </h2>
+                {/* Removed arrow span */}
+                <h2 className="card-title">{p.title}</h2>
                 <div className="card-sub">{p.subtitle}</div>
               </header>
 
