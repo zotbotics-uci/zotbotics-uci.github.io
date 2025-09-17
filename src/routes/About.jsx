@@ -21,8 +21,10 @@ export default function About() {
             <h2 className="accent-title accent-title-lg">General Meeting Time</h2>
             <p>Thursdays 5–6pm<br/>Engineering Gateway 3161</p>
           </div>
+
+          {/* Slightly tighter vertical crop */}
           <div className="card">
-            <div className="media">
+            <div className="media cropped">
               <img src={asset('image5.png')} alt="meeting photo" />
             </div>
           </div>
@@ -31,11 +33,13 @@ export default function About() {
         <div className="line"></div>
 
         <div className="grid cols-2">
+          {/* Slightly tighter vertical crop */}
           <div className="card">
-            <div className="media">
+            <div className="media cropped">
               <img src={asset('image6.png')} alt="group photo" />
             </div>
           </div>
+
           <div className="card card-pad">
             <h2 className="accent-title accent-title-lg">Opportunities</h2>
             <ul>
@@ -50,36 +54,21 @@ export default function About() {
       </section>
 
       <section className="section">
-        <h2 style={{ 
-          marginTop: 0, 
-          textAlign: 'center', 
+        <h2 style={{
+          marginTop: 0,
+          textAlign: 'center',
           fontSize: '32px',
           color: 'var(--accent)',
           marginBottom: '32px'
         }}>
           Gallery
         </h2>
+
         <div className="grid gallery">
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image8.png')} alt="gallery 1" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image9.png')} alt="gallery 2" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image10.png')} alt="gallery 3" />
-            </div>
-          </div>
-          <div className="card">
-            <div className="media thumb">
-              <img src={asset('image11.png')} alt="gallery 4" />
-            </div>
-          </div>
+          <div className="card"><div className="media thumb"><img src={asset('image8.png')} alt="gallery 1" /></div></div>
+          <div className="card"><div className="media thumb"><img src={asset('image9.png')} alt="gallery 2" /></div></div>
+          <div className="card"><div className="media thumb"><img src={asset('image10.png')} alt="gallery 3" /></div></div>
+          <div className="card"><div className="media thumb"><img src={asset('image11.png')} alt="gallery 4" /></div></div>
         </div>
       </section>
     </>
