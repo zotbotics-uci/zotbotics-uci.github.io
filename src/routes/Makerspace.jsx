@@ -26,7 +26,7 @@ export default function Makerspace() {
         <div className="grid cols-3">
           <Stat num="1" label="Sienci LongMill MK1 3-Axis Mill" />
           <Stat num="12" label="Bambu A1 Printers" />
-          <Stat num="70" label="W Laser (Atomstack A70 Max)" />
+          <Stat num="70W" label="Laser (Atomstack A70 Max)" />
         </div>
       </section>
 
