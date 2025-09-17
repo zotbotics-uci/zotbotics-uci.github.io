@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { asset } from '../asset'
 
 function Stat({ num, label }) {
@@ -11,6 +11,8 @@ function Stat({ num, label }) {
 }
 
 export default function Makerspace() {
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   return (
     <>
       <section className="section hero">
@@ -22,7 +24,6 @@ export default function Makerspace() {
 
       <section className="section">
         <div className="grid cols-3">
-          {/* UPDATED STATS */}
           <Stat num="1" label="Sienci LongMill MK1 3-Axis Mill" />
           <Stat num="12" label="Bambu A1 Printers" />
           <Stat num="70" label="W Laser (Atomstack A70 Max)" />
@@ -32,7 +33,7 @@ export default function Makerspace() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card">
-            <div className="media lg">
+            <div className="media lg no-border">
               <img src={asset('image7.png')} alt="printer wall" />
             </div>
           </div>

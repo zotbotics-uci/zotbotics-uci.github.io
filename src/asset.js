@@ -1,1 +1,4 @@
-export const asset = (file) => new URL(`./assets/${file}`, import.meta.url).href
+// Resolves images from src/assets/<name> in Vite-friendly way
+export function asset(name) {
+  return new URL(`./assets/${name}`, import.meta.url).href
+}
