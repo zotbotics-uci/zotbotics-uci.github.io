@@ -9,7 +9,7 @@ const PROJECTS = [
     title: 'Manufacturing 101',
     subtitle: '1 Quarter · Team size 1 · Cost: TBD',
     blurb:
-      'Entry-level, hands-on training: CAD, 3D printing, CNC, soldering, and Arduino. Capstone is designing and assembling a custom RC car.',
+      "This entry-level project is designed to equip you with essential skills for designing and building robots. You’ll attend two workshops per week covering topics such as CAD, 3D printing, CNC cutting, soldering, and Arduino. The quarter culminates in the design and assembly of a custom kinetic sculpture, combining everything you've learned.",
     img: 'l1.png',
   },
   {
@@ -17,7 +17,7 @@ const PROJECTS = [
     title: 'Spider Droid',
     subtitle: '1 Quarter · Team size 2–3 · Cost: TBD',
     blurb:
-      'Build an open-source robotic spider with autonomous obstacle avoidance and optional Bluetooth control. Reinforces 3D printing, electronics, and embedded programming.',
+      'In this project, you’ll build an open-source robotic spider that can avoid obstacles autonomously or be manually controlled via Bluetooth. This project reinforces skills in 3D printing, electronics assembly, and embedded programming.',
     img: 'l2.png',
   },
   {
@@ -25,15 +25,15 @@ const PROJECTS = [
     title: 'Robot Arm',
     subtitle: '2 Quarters · Team size 5–6 · Cost: TBD',
     blurb:
-      '3D print, assemble, wire, and program an Arduino-based arm. End with challenges like max-weight lift and cup stacking—optimize your design for performance.',
-    img: 'l3.png', // replace when you have the real file
+      'Build and customize your own open-source robotic arm! You\'ll 3D print, assemble, wire, and program the arm using Arduino. Teams will compete at the end of the project in a series of challenges, including a max-weight lift and a cup-stacking contest. Success will depend on how well you optimize and modify your design for performance.',
+    img: 'l3.png',
   },
   {
     num: '04',
     title: 'DIY Droid',
     subtitle: '3 Quarters · Team size 7–8 · Cost: TBD',
     blurb:
-      'Open-ended build: R2-D2/BB-8-inspired or something unique (snack bot, laundry folder, soccer bot). Push technical, creative, and teamwork skills.',
+      'This open-ended project gives you the creative freedom to design and build a robot that performs a task of your choice. You’ll work with a larger team to bring your own idea to life, whether it\'s a Star Wars-inspired droid like R2-D2 or BB-8, or something unique like a robot that serves snacks, folds clothes, or plays soccer! This project challenges your technical, creative, and collaborative abilities.',
     img: 'l4.png',
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS = [
     title: 'Self-Leveling Robot Anteater',
     subtitle: '3 Quarters · Team size 10 · Cost: TBD',
     blurb:
-      'Advanced, application-based: anteater-shaped robot that can stand, walk, jump, and recover from falls. Requires controls, mechatronics, and biomechanics.',
+      'Our most advanced project is focused on designing and building a self-leveling robot in the shape of UCI’s mascot, the anteater. This robot will be able to stand, walk, jump, and recover from falls. It requires advanced knowledge across multiple engineering domains, including controls, mechatronics, and biomechanics. Admission is application-based and best suited for experienced members ready for a challenge.',
     img: 'l5.png',
   },
 ]
@@ -53,10 +53,10 @@ export default function Projects() {
       <section className="section hero projects-hero">
         <h1 className="title">PROJECTS</h1>
         <p className="subtitle">
-          Hello everyone, our board is excited to present the 2025–2026 ZOTBotics Projects! This year's lineup is
-          designed to help students gain hands-on experience and foundational skills in robotics, fabrication,
-          and teamwork. Whether you're just starting out or looking to challenge yourself with a complex,
-          interdisciplinary build, there's a project for you. Let's learn and build together!
+          Divided on difficulty, the project lineup is
+          designed to help students gain hands-on experience and foundational skills in robotics, fabrication, and
+          teamwork. Whether you're just starting out or looking to challenge yourself with a complex, interdisciplinary
+          build, there's a project for you. 
         </p>
       </section>
 
