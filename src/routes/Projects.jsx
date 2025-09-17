@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
-
-// build a URL to src/assets/<name> that Vite understands
-const imgUrl = (name) => new URL(`../assets/${name}`, import.meta.url).href
+import { asset } from '../asset'
 
 const PROJECTS = [
   {
@@ -70,12 +68,11 @@ export default function Projects() {
                 <div className="card-sub">{p.subtitle}</div>
               </header>
 
-              {/* show full text; no clamp */}
               <p className="card-blurb full">{p.blurb}</p>
 
               <div className="card-media">
                 <img
-                  src={imgUrl(p.img)}
+                  src={asset(p.img)}
                   alt={`${p.title} preview`}
                   loading="lazy"
                   onError={(e) => {
