@@ -16,7 +16,7 @@ export default function About() {
       <section className="section">
         <div className="grid cols-2">
           <div className="card card-pad">
-            <h3>Join us for General Meetings!</h3>
+            <h2 className="accent-title accent-title-lg">General Meeting Time</h2>
             <p>Thursdays 5–6pm<br/>Engineering Gateway 3161</p>
           </div>
           <div className="card">
@@ -35,7 +35,7 @@ export default function About() {
             </div>
           </div>
           <div className="card card-pad">
-            <h3>Opportunities</h3>
+            <h2 className="accent-title accent-title-lg">Opportunities</h2>
             <ul>
               <li>Hands-On Projects</li>
               <li>MakerSpace Access</li>

@@ -49,6 +49,7 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <>
+      {/* Hero matches Makerspace: centered title & paragraph */}
       <section className="section hero projects-hero">
         <h1 className="title">PROJECTS</h1>
         <p className="subtitle">
