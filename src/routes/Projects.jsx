@@ -5,44 +5,44 @@ const imgUrl = (name) => new URL(`../assets/${name}`, import.meta.url).href
 
 const PROJECTS = [
   {
-    num: '01',
+    num: 'L0',
     title: 'Manufacturing 101',
     subtitle: '1 Quarter · Team size 1 · Cost: TBD',
     blurb:
       "This entry-level project is designed to equip you with essential skills for designing and building robots. You’ll attend two workshops per week covering topics such as CAD, 3D printing, CNC cutting, soldering, and Arduino. The quarter culminates in the design and assembly of a custom kinetic sculpture, combining everything you've learned.",
-    img: 'l1.png',
+    img: 'level0.png',
   },
   {
-    num: '02',
+    num: 'L1',
     title: 'Spider Droid',
     subtitle: '1 Quarter · Team size 2–3 · Cost: TBD',
     blurb:
       'In this project, you’ll build an open-source robotic spider that can avoid obstacles autonomously or be manually controlled via Bluetooth. This project reinforces skills in 3D printing, electronics assembly, and embedded programming.',
-    img: 'l2.png',
+    img: 'level1.png',
   },
   {
-    num: '03',
+    num: 'L2',
     title: 'Robot Arm',
     subtitle: '2 Quarters · Team size 5–6 · Cost: TBD',
     blurb:
       'Build and customize your own open-source robotic arm! You\'ll 3D print, assemble, wire, and program the arm using Arduino. Teams will compete at the end of the project in a series of challenges, including a max-weight lift and a cup-stacking contest. Success will depend on how well you optimize and modify your design for performance.',
-    img: 'l3.png',
+    img: 'level2.png',
   },
   {
-    num: '04',
+    num: 'L3',
     title: 'DIY Droid',
     subtitle: '3 Quarters · Team size 7–8 · Cost: TBD',
     blurb:
       'This open-ended project gives you the creative freedom to design and build a robot that performs a task of your choice. You’ll work with a larger team to bring your own idea to life, whether it\'s a Star Wars-inspired droid like R2-D2 or BB-8, or something unique like a robot that serves snacks, folds clothes, or plays soccer! This project challenges your technical, creative, and collaborative abilities.',
-    img: 'l4.png',
+    img: 'level3.png',
   },
   {
-    num: '05',
+    num: 'L4',
     title: 'Self-Leveling Robot Anteater',
     subtitle: '3 Quarters · Team size 10 · Cost: TBD',
     blurb:
       'Our most advanced project is focused on designing and building a self-leveling robot in the shape of UCI’s mascot, the anteater. This robot will be able to stand, walk, jump, and recover from falls. It requires advanced knowledge across multiple engineering domains, including controls, mechatronics, and biomechanics. Admission is application-based and best suited for experienced members ready for a challenge.',
-    img: 'l5.png',
+    img: 'level4.png',
   },
 ]
 
