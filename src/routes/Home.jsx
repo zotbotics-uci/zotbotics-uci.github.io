@@ -66,7 +66,7 @@ export default function Home() {
             <h2 className="title" style={{ fontSize: 48, marginBottom: 16, textAlign: 'left' }}>
               DESIGN, BUILD, &amp; MORE!
             </h2>
-            <button className="cta" onClick={goTop('/makerspace')}>Explore our Makerspace</button>
+            <button className="cta" onClick={goTop('/makerspace')}>Explore our Makerspace →</button>
           </div>
         <div className="card">
             <div className="media lg">
