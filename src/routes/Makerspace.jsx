@@ -1,4 +1,6 @@
-import React from 'react'
+
+// Makerspace.jsx - Updated with scroll to top and centered image
+import React, { useEffect } from 'react'
 import { asset } from '../asset'
 
 function Stat({ num, label }) {
@@ -11,15 +13,22 @@ function Stat({ num, label }) {
 }
 
 export default function Makerspace() {
+  useEffect(() => {
+    // Scroll to top if hash is present
+    if (window.location.hash === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [])
+
   return (
     <>
-      <section className="section hero">
+      <section className="section hero" id="top">
         <h1 className="title">THE MAKERSPACE</h1>
         <p className="subtitle">
           Located on outer ring road, our makerspace offers cutting-edge tools and equipment for all your creative projects.
         </p>
       </section>
-
+      
       <section className="section">
         <div className="grid cols-3">
           {/* UPDATED STATS */}
@@ -28,11 +37,11 @@ export default function Makerspace() {
           <Stat num="70" label="W Laser (Atomstack A70 Max)" />
         </div>
       </section>
-
+      
       <section className="section">
         <div className="grid cols-2">
           <div className="card">
-            <div className="media lg">
+            <div className="media lg makerspace-image">
               <img src={asset('image7.png')} alt="printer wall" />
             </div>
           </div>
@@ -42,9 +51,7 @@ export default function Makerspace() {
               Located on outer ring road, the Interim Classroom Facility houses the campus' largest makerspace.
             </p>
             <p>
-              From our large collection of 3D printers to our Sienci LongMill MK1 3-axis CNC mill, Atomstack A70 Max
-              70-watt laser cutter, and a wide selection of hand and power tools, members can find anything to help
-              complete projects. Our MakerSpace Managers are always there to help!
+              From our large collection of 3D printers to our Sienci LongMill MK1 3-axis CNC mill, Atomstack A70 Max 70-watt laser cutter, and a wide selection of hand and power tools, members can find anything to help complete projects. Our MakerSpace Managers are always there to help!
             </p>
           </div>
         </div>

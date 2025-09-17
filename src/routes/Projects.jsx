@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // build a URL to src/assets/<name> that Vite understands
 const imgUrl = (name) => new URL(`../assets/${name}`, import.meta.url).href
@@ -47,16 +47,16 @@ const PROJECTS = [
 ]
 
 export default function Projects() {
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   return (
     <>
-      {/* Hero matches Makerspace: centered title & paragraph */}
       <section className="section hero projects-hero">
         <h1 className="title">PROJECTS</h1>
         <p className="subtitle">
-          Divided on difficulty, the project lineup is
-          designed to help students gain hands-on experience and foundational skills in robotics, fabrication, and
-          teamwork. Whether you're just starting out or looking to challenge yourself with a complex, interdisciplinary
-          build, there's a project for you. 
+          Divided on difficulty, the project lineup is designed to help students gain hands-on experience
+          and foundational skills in robotics, fabrication, and teamwork. Whether you're just starting out
+          or looking to challenge yourself with a complex, interdisciplinary build, there's a project for you.
         </p>
       </section>
 
@@ -66,12 +66,12 @@ export default function Projects() {
             <article key={p.num} className="project-card">
               <header className="card-head">
                 <div className="card-num">{p.num}</div>
-                {/* Removed arrow span */}
                 <h2 className="card-title">{p.title}</h2>
                 <div className="card-sub">{p.subtitle}</div>
               </header>
 
-              <p className="card-blurb">{p.blurb}</p>
+              {/* show full text; no clamp */}
+              <p className="card-blurb full">{p.blurb}</p>
 
               <div className="card-media">
                 <img
@@ -83,7 +83,7 @@ export default function Projects() {
                       'data:image/svg+xml;utf8,' +
                       encodeURIComponent(
                         `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900">
-                           <rect width="100%" height="100%" fill="#0b1a3a"/>
+                           <rect width="100%" height="100%" fill="#0e1f40"/>
                            <text x="50%" y="50%" fill="#e8d68a" font-size="28" text-anchor="middle" dominant-baseline="middle">
                              Add image: ${p.img} in src/assets
                            </text>

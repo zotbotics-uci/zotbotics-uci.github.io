@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { asset } from '../asset'
 
 export default function About() {
+  // land at top when arriving here from a link
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   return (
     <>
       <section className="section hero">
@@ -48,12 +51,9 @@ export default function About() {
       </section>
 
       <section className="section">
-        <h2 style={{ 
-          marginTop: 0, 
-          textAlign: 'center', 
-          fontSize: '32px',
-          color: 'var(--accent)',
-          marginBottom: '32px'
+        <h2 style={{
+          marginTop: 0, textAlign: 'center', fontSize: '32px',
+          color: 'var(--accent)', marginBottom: '32px'
         }}>
           Gallery
         </h2>
